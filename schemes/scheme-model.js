@@ -46,13 +46,14 @@ function add(data) {
     return db('schemes').insert(data)
 }
 
-function addStep() {
-
+function addStep(data) {
+    return db('steps').insert(data)
 }
 
-function update() {
+function update(post, id) {
+    return db('schemes').where('id', Number(id)).update(post)
 
 }
-function remove() {
-
+function remove(id) {
+    return db('schemes').where('id', Number(id)).del()
 }
